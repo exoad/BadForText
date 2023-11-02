@@ -38,8 +38,6 @@ public class OutStream
 			this.os = System.out;
 	}
 
-	public
-
 	public void print(char content)
 	{
 		try
