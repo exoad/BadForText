@@ -1,13 +1,12 @@
 package tests;
 
-import pkg.exoad.bad4text.TextUI;
+import pkg.exoad.bad4text.B4T;
 
 public class Main
 {
 	public static void main(String[] args)
 	{
-		System.out.println("Ok hello");
-		TextUI.OUT.print('c');
-		TextUI.OUT.print('A');
+		B4T.OUT.print('c');
+		B4T.OUT.print('A');
 	}
 }
