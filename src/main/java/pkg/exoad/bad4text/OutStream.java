@@ -1,6 +1,8 @@
 package pkg.exoad.bad4text;
+
 import java.io.IOException;
 import java.io.OutputStream;
+
 public class OutStream
 {
 	public static final class TUI_OutStreamException
@@ -15,8 +17,7 @@ public class OutStream
 		{
 			super(
 					msg,
-					cause
-			);
+					cause);
 		}
 	}
 
@@ -47,8 +48,7 @@ public class OutStream
 		{
 			throw new TUI_OutStreamException(
 					"fx::print() Failed",
-					e
-			);
+					e);
 		}
 	}
 }

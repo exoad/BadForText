@@ -1,4 +1,5 @@
 package pkg.exoad.bad4text.core.util;
+
 public class Color
 {
 	public float red;

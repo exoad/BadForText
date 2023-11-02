@@ -1,4 +1,5 @@
 package tests;
+
 import java.util.ArrayDeque;
 import java.util.Queue;
 import java.util.function.Supplier;
@@ -15,8 +16,7 @@ public class TestEnv
 	{
 		return new TestCase<>(
 				value,
-				expected
-		);
+				expected);
 	}
 
 	public static TestCase< Integer > test(Runnable r)
@@ -26,8 +26,7 @@ public class TestEnv
 					r.run();
 					return 1;
 				},
-				1
-		);
+				1);
 	}
 
 	public static < T > void addTest(TestCase< T > e)
@@ -62,11 +61,12 @@ public class TestEnv
 			TestCase< ? > tc = tests.poll();
 			boolean isOk = tc.assertEq();
 			out.println((isOk ? "PASSED" : "FAILED") + " [ TEST " + index + " ]:\n\tGot " + tc.value()
-			                                                                                  .get()
-			                                                                                  .toString()
-					            + "\n\tExpected: " + tc.expected()
-					                                   .toString());
-			if (isOk) passed++;
+					.get()
+					.toString()
+					+ "\n\tExpected: " + tc.expected()
+							.toString());
+			if (isOk)
+				passed++;
 			else failed++;
 			index++;
 		}
