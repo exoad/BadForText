@@ -1,4 +1,5 @@
-package pkg.exoad.bad4text.core.util;
+package pkg.exoad.bad4text.core.text;
+import pkg.exoad.bad4text.core.util.Operations;
 import pkg.exoad.bad4text.debug.B4T_Exception;
 import pkg.exoad.bad4text.debug.Code;
 

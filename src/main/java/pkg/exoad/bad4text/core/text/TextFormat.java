@@ -1,4 +1,4 @@
-package pkg.exoad.bad4text.core.util;
+package pkg.exoad.bad4text.core.text;
 public final class TextFormat
 {
 

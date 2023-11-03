@@ -1,6 +1,7 @@
-package pkg.exoad.bad4text.core.util;
+package pkg.exoad.bad4text.core.text;
 public class TextStyle
 {
+
 	public enum Styles
 	{
 		BLINK,
