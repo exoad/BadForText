@@ -1,6 +1,6 @@
 package pkg.exoad.bad4text.core.util;
 
-import pkg.exoad.bad4text.OutStream;
+import pkg.exoad.bad4text.core.OutStream;
 
 public class NaiveLogger
 {

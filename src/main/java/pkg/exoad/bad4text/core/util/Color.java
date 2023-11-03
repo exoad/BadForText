@@ -9,12 +9,22 @@ public class Color
 
 	public static Color make(float red, float green, float blue)
 	{
-		return new Color(red, green, blue, 1F);
+		return new Color(
+				red,
+				green,
+				blue,
+				1F
+		);
 	}
 
 	public static Color make(float red, float green, float blue, float opacity)
 	{
-		return new Color(red, green, blue, opacity);
+		return new Color(
+				red,
+				green,
+				blue,
+				opacity
+		);
 	}
 
 	private Color(float red, float green, float blue, float opacity)
