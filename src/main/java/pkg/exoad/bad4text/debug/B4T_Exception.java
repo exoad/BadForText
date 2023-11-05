@@ -2,6 +2,13 @@ package pkg.exoad.bad4text.debug;
 public class B4T_Exception
 		extends RuntimeException
 {
+	public static void noImplementation()
+	{
+		throw new B4T_Exception(
+				"Functionality not implemented"
+		);
+	}
+
 	public B4T_Exception(Class< ? > causeSource, String message)
 	{
 		super("\n\t\t[" + causeSource.getCanonicalName() + "]:\n\t\t\t" + message);

@@ -1,4 +1,4 @@
-package pkg.exoad.bad4text.core;
+package pkg.exoad.bad4text.core.consts;
 
 public final class Consts
 {

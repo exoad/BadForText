@@ -5,8 +5,7 @@ public class NullStylesPipelineMember
 {
 	@Override public TextStyle.StyledText apply(String text, TextStyle.Styles... styles)
 	{
-		return new TextStyle.StyledText(
-				text,
+		return TextStyle.StyledText.make(
 				text
 		);
 	}

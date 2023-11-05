@@ -1,4 +1,4 @@
-package pkg.exoad.bad4text.core.util;
+package pkg.exoad.bad4text.core;
 
 public class Color
 {

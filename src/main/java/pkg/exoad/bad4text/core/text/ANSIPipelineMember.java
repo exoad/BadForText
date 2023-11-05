@@ -1,5 +1,5 @@
 package pkg.exoad.bad4text.core.text;
-import pkg.exoad.bad4text.core.util.Operations;
+import pkg.exoad.bad4text.core.OperationsHelper;
 import pkg.exoad.bad4text.debug.B4T_Exception;
 import pkg.exoad.bad4text.debug.Code;
 
@@ -153,7 +153,7 @@ public class ANSIPipelineMember
 
 	private static String _format(int[] codes, String text)
 	{
-		codes = Operations.makeUnique(codes);
+		codes = OperationsHelper.makeUnique(codes);
 		StringBuilder sb = new StringBuilder();
 		sb.append(CARRIAGE_START);
 		for (int i = 0; i < codes.length; i++)
@@ -187,7 +187,7 @@ public class ANSIPipelineMember
 				);
 			codes[i] = code;
 		}
-		return new TextStyle.StyledText(
+		return TextStyle.StyledText.make(
 				text,
 				_format(
 						codes,

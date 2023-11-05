@@ -1,7 +1,7 @@
-package pkg.exoad.bad4text.core.util;
-public final class Operations
+package pkg.exoad.bad4text.core;
+public final class OperationsHelper
 {
-	private Operations()
+	private OperationsHelper()
 	{
 	}
 

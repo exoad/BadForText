@@ -3,10 +3,13 @@ package pkg.exoad.bad4text.core;
 import pkg.exoad.bad4text.debug.B4T_Exception;
 import pkg.exoad.bad4text.debug.Code;
 
+import java.io.Flushable;
 import java.io.IOException;
 import java.io.OutputStream;
 
 public class OutStream
+		implements
+		Flushable
 {
 	private OutputStream os;
 
@@ -46,5 +49,11 @@ public class OutStream
 					e
 			);
 		}
+	}
+
+	@Override public void flush() throws
+	                              IOException
+	{
+		os.flush();
 	}
 }
