@@ -1,0 +1,11 @@
+pkg.exoad.bad4text
+pkg.exoad.bad4text.core
+pkg.exoad.bad4text.core.consts
+pkg.exoad.bad4text.core.defs
+pkg.exoad.bad4text.core.intf
+pkg.exoad.bad4text.core.structs
+pkg.exoad.bad4text.core.text
+pkg.exoad.bad4text.core.text.markup
+pkg.exoad.bad4text.debug
+pkg.exoad.bad4text.services
+tests
