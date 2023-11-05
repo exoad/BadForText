@@ -8,8 +8,7 @@ import java.io.InputStream;
 import java.io.OutputStream;
 
 /**
- * This is the barebones implementation of detecting input events
- * from the user through the console.
+ * 检测用户通过控制台输入事件的基本实现
  *
  * @author Jack Meng
  */

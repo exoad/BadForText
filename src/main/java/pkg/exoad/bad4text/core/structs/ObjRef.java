@@ -1,9 +1,9 @@
 package pkg.exoad.bad4text.core.structs;
 
 /**
- * Primarily for getting around Java restrictions on finalized variables in lambdas.
+ * 主要用于绕过 Java 对于 Lambda 表达式中 final 变量的限制。
  *
- * @param <T> The type of the payload.
+ * @param <T> 载荷的类型。
  * @author Jack Meng
  */
 public class ObjRef < T >

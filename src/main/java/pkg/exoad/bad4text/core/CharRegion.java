@@ -6,10 +6,6 @@ import pkg.exoad.bad4text.core.intf.IFlushableComponent;
 import pkg.exoad.bad4text.core.text.TextStyle;
 
 import java.util.ArrayList;
-/**
- * A more efficient 2D char array representation. You can think of it
- * like a matrix but for chars! :)
- */
 public class CharRegion
 		implements IFlushableComponent
 {

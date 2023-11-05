@@ -1,7 +1,7 @@
 package pkg.exoad.bad4text.debug;
 
 /**
- * Very stupid implementation of a debugging logger
+ * 非常愚蠢的调试日志记录器实现
  */
 public final class Debug
 {

@@ -1,18 +1,19 @@
 package pkg.exoad.bad4text.core.intf;
 
 /**
- * A direct link to an output stream to dump formatted content to.
+ * 用于将格式化内容输出的直接链接到输出流的引用
  *
  * @author Jack Meng
  */
 public interface IFlushableComponent
 {
 	/**
-	 * Signifies that this component will now dump all of its formatted content to a receiving stream.
-	 * <p>
-	 * Mostly used for outputting formatted content.
+	 * 表示此组件现在将把其所有格式化内容输出到一个接收流。
+	 * <p> <br/>
+	 * 主要用于输出格式化内容。
 	 *
 	 * @see pkg.exoad.bad4text.core.OutStream
 	 */
+
 	void flush();
 }
