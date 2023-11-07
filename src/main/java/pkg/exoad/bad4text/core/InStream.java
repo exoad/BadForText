@@ -1,6 +1,8 @@
 package pkg.exoad.bad4text.core;
+
 import java.io.*;
 import java.util.StringTokenizer;
+
 public class InStream
 {
 	private BufferedReader reader;
@@ -13,9 +15,7 @@ public class InStream
 	}
 
 	public synchronized void setInputStream(InputStream newStream)
-	{
-		reader = new BufferedReader(new InputStreamReader(newStream));
-	}
+	{ reader = new BufferedReader(new InputStreamReader(newStream)); }
 
 	public boolean hasNextToken()
 	{
@@ -87,7 +87,7 @@ public class InStream
 				{
 					String currentLine = reader.readLine();
 					if (currentLine == null)
-						return null;
+					    return null;
 					stringTokenizer = new StringTokenizer(currentLine);
 				}
 				currentToken = stringTokenizer.nextToken();

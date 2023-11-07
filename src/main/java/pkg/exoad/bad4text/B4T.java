@@ -1,6 +1,7 @@
 package pkg.exoad.bad4text;
 
 import pkg.exoad.bad4text.core.Console;
+import pkg.exoad.bad4text.debug.B4T_Exception;
 import pkg.exoad.bad4text.services.StructService;
 
 import java.util.HashMap;
@@ -8,8 +9,11 @@ import java.util.HashMap;
 /**
  * B4T 主类，用于控制台输入输出和属性设置。
  */
-public class B4T
+public final class B4T
 {
+	private B4T()
+	{}
+
 	public static final Console IO = new Console();
 
 	private static final HashMap< String, Object > INTERNAL_PROPERTIES;
@@ -19,13 +23,22 @@ public class B4T
 		INTERNAL_PROPERTIES = new HashMap<>();
 		// 输入输出配置
 		INTERNAL_PROPERTIES.put(
-				"io.useansi",
-				true
+		        "io.useansi",
+		        true
 		); // 使用 ANSI
 		INTERNAL_PROPERTIES.put(
-				"io.dumb_console_clear_nls",
-				80
+		        "io.dumb_console_clear_nls",
+		        80
 		); // 在清空控制台之前打印的字符数（这是清空控制台的简单方法）
+
+		INTERNAL_PROPERTIES.put(
+		        "b4t.internal_logging",
+		        true
+		);
+		INTERNAL_PROPERTIES.put(
+		        "b4t.store_unused_logging",
+		        true
+		);
 	}
 
 	/**
@@ -37,8 +50,8 @@ public class B4T
 	public static void setProperty(String key, Object value)
 	{
 		INTERNAL_PROPERTIES.put(
-				key,
-				value
+		        key,
+		        value
 		);
 	}
 
@@ -53,11 +66,26 @@ public class B4T
 		return INTERNAL_PROPERTIES.get(key);
 	}
 
+	public static boolean isPropertyTrue(String key)
+	{
+		Object e = getProperty(key);
+		B4T_Exception.throwIf(
+		        !(e instanceof Boolean),
+		        B4T.class,
+		        "The property \"" + key + "\" is not a boolean. Got type: \"" + e.getClass()
+		                                                                         .getCanonicalName()
+		                + "\""
+		);
+		return Boolean.TRUE.equals(getProperty(key));
+	}
+
 	/**
 	 * 启动 B4T 引擎并打印内部属性配置。
 	 */
-	public static synchronized void armEngine()
+	public static synchronized void armEngine(boolean printOutputs)
 	{
-		IO.print(StructService.prettifyMap(INTERNAL_PROPERTIES) + "\n\n");
+		if (printOutputs)
+		    IO.print(StructService.prettifyMap(INTERNAL_PROPERTIES) + "\n\n");
+		// TODO: fixup
 	}
 }

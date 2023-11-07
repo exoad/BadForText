@@ -1,4 +1,5 @@
 package pkg.exoad.bad4text.core;
+
 import pkg.exoad.bad4text.B4T;
 import pkg.exoad.bad4text.core.consts.ConstCharacters;
 import pkg.exoad.bad4text.core.defs.B4T_HeavyOperation;
@@ -6,6 +7,7 @@ import pkg.exoad.bad4text.core.intf.IFlushableComponent;
 import pkg.exoad.bad4text.core.text.TextStyle;
 
 import java.util.ArrayList;
+
 public class CharRegion
 		implements IFlushableComponent
 {
@@ -34,8 +36,7 @@ public class CharRegion
 		return this;
 	}
 
-	@B4T_HeavyOperation(reason = "Only if there are preserved lines does all of them get dereferenced and cleared.")
-	public synchronized void clearAllStoredLines()
+	@B4T_HeavyOperation(reason = "Only if there are preserved lines does all of them get dereferenced and cleared.") public synchronized void clearAllStoredLines()
 	{
 		if (!lines.isEmpty())
 			lines.clear();
@@ -43,7 +44,7 @@ public class CharRegion
 
 	@Override public void flush()
 	{
-		lines.forEach((x) -> B4T.IO.print(x.toString()
-		                                    .toCharArray()));
+		lines.forEach(x -> B4T.IO.print(x.toString()
+				.toCharArray()));
 	}
 }

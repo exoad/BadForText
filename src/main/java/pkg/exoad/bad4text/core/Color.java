@@ -13,8 +13,7 @@ public class Color
 				red,
 				green,
 				blue,
-				1F
-		);
+				1F);
 	}
 
 	public static Color make(float red, float green, float blue, float opacity)
@@ -23,8 +22,7 @@ public class Color
 				red,
 				green,
 				blue,
-				opacity
-		);
+				opacity);
 	}
 
 	private Color(float red, float green, float blue, float opacity)

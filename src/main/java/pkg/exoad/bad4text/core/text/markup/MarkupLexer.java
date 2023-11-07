@@ -41,7 +41,6 @@ public class MarkupLexer
 			String tagName = matcher.group(1);
 			String tagContent = matcher.group(2);
 
-			System.out.println(tagContent);
 			TreeNode< Pair< String, String > > newTag = new TreeNode<>(Pair.make(
 					tagName,
 					tagContent

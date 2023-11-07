@@ -1,4 +1,5 @@
 package pkg.exoad.bad4text.core;
+
 public final class OperationsHelper
 {
 	private OperationsHelper()
@@ -28,11 +29,11 @@ public final class OperationsHelper
 		}
 		int[] r2 = new int[i];
 		System.arraycopy(
-				r,
-				0,
-				r2,
-				0,
-				i
+		        r,
+		        0,
+		        r2,
+		        0,
+		        i
 		);
 		return r2;
 	}
